@@ -1,0 +1,6 @@
+framework module MessageCustomF {
+  umbrella header "MessageCustomF-umbrella.h"
+
+  export *
+  module * { export * }
+}
