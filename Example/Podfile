@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'MessageCustomF_Example' do
+  pod 'MessageCustomF', :path => '../'
+
+  target 'MessageCustomF_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
