@@ -59,14 +59,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6FDE412066C9F49D94B1F1E2 /* MessageCustomF.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MessageCustomF.podspec; path = ../MessageCustomF.podspec; sourceTree = "<group>"; };
+		6FDE412066C9F49D94B1F1E2 /* MessageCustomF.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MessageCustomF.podspec; path = ../MessageCustomF.podspec; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7C4AEFD298690D087CA3E4C /* Pods_MessageCustomF_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageCustomF_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC97D4F0D69008C3717D14EB /* Pods-MessageCustomF_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageCustomF_Tests.release.xcconfig"; path = "Target Support Files/Pods-MessageCustomF_Tests/Pods-MessageCustomF_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA270FAFAB2D036F237D30C2 /* Pods_MessageCustomF_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageCustomF_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDA2C0D7ED765947F73F1FBD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		CB74B96FCAF3389EBE0C6625 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BDA2C0D7ED765947F73F1FBD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CB74B96FCAF3389EBE0C6625 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				193041643EBB54DB4EF65F49 /* Pods-MessageCustomF_Tests.debug.xcconfig */,
 				AC97D4F0D69008C3717D14EB /* Pods-MessageCustomF_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +208,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				FF18A0C8E6DAC2CBEF6C634F /* [CP] Embed Pods Frameworks */,
+				344B7FCA93754C0B53D30034 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +249,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = fangdada1;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = D73RK8F6NV;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +263,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -336,6 +341,38 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MessageCustomF_Tests/Pods-MessageCustomF_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		344B7FCA93754C0B53D30034 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MessageCustomF_Example/Pods-MessageCustomF_Example-resources.sh",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RongCloud.bundle",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/en.lproj",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/zh-Hans.lproj",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/ar.lproj",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/Emoji.plist",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RCColor.plist",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RCConfig.plist",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RongSticker.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RongCloud.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ar.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Emoji.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCColor.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCConfig.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RongSticker.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MessageCustomF_Example/Pods-MessageCustomF_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		686367C0C0C2941B304CA596 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,10 +403,34 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MessageCustomF_Example/Pods-MessageCustomF_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MessageCustomF/MessageCustomF.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ChatRoom/RongChatRoom.framework/RongChatRoom",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ContactCard/RongContactCard.framework/RongContactCard",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/CustomerService/RongCustomerService.framework/RongCustomerService",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Discussion/RongDiscussion.framework/RongDiscussion",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMKit/RongIMKit.framework/RongIMKit",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLib/RongIMLib.framework/RongIMLib",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLibCore/RongIMLibCore.framework/RongIMLibCore",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Location/RongLocation.framework/RongLocation",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/LocationKit/RongLocationKit.framework/RongLocationKit",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/PublicService/RongPublicService.framework/RongPublicService",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/RongSticker/RongSticker.framework/RongSticker",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Sight/RongSight.framework/RongSight",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageCustomF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongChatRoom.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongContactCard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongCustomerService.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongDiscussion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongIMKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongIMLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongIMLibCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongLocationKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongPublicService.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongSticker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RongSight.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -513,12 +574,17 @@
 			baseConfigurationReference = 2A6C3709C828FD49F83CF56A /* Pods-MessageCustomF_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D73RK8F6NV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageCustomF/MessageCustomF-Prefix.pch";
 				INFOPLIST_FILE = "MessageCustomF/MessageCustomF-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfinal.mendi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = news;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -529,12 +595,17 @@
 			baseConfigurationReference = 038D027D60A3F8088B7129AA /* Pods-MessageCustomF_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D73RK8F6NV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageCustomF/MessageCustomF-Prefix.pch";
 				INFOPLIST_FILE = "MessageCustomF/MessageCustomF-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfinal.mendi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = news;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};

@@ -177,9 +177,33 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/MessageCustomF/MessageCustomF.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ChatRoom/RongChatRoom.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ContactCard/RongContactCard.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/CustomerService/RongCustomerService.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Discussion/RongDiscussion.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMKit/RongIMKit.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLib/RongIMLib.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLibCore/RongIMLibCore.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Location/RongLocation.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/LocationKit/RongLocationKit.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/PublicService/RongPublicService.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/RongSticker/RongSticker.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Sight/RongSight.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/MessageCustomF/MessageCustomF.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ChatRoom/RongChatRoom.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ContactCard/RongContactCard.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/CustomerService/RongCustomerService.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Discussion/RongDiscussion.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMKit/RongIMKit.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLib/RongIMLib.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLibCore/RongIMLibCore.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Location/RongLocation.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/LocationKit/RongLocationKit.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/PublicService/RongPublicService.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/RongSticker/RongSticker.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Sight/RongSight.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

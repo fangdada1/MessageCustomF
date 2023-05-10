@@ -1,0 +1,6 @@
+framework module RongLocationKit {
+  umbrella header "RongLocationKit.h"
+
+  export *
+  module * { export * }
+}

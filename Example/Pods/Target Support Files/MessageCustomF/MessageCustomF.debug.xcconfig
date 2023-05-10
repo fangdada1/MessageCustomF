@@ -1,6 +1,8 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/MessageCustomF
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/RongCloudIM/RongCloudIM" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ChatRoom" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ContactCard" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/CustomerService" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Discussion" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLib" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/IMLibCore" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Location" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/LocationKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/PublicService" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/RongSticker" "${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/Sight"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+OTHER_LDFLAGS = $(inherited) -framework "RongChatRoom" -framework "RongContactCard" -framework "RongCustomerService" -framework "RongDiscussion" -framework "RongIMKit" -framework "RongIMLib" -framework "RongIMLibCore" -framework "RongLocation" -framework "RongLocationKit" -framework "RongPublicService" -framework "RongSight" -framework "RongSticker"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

@@ -16,7 +16,12 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
-  "source_files": "MessageCustomF/Classes/**/*"
+  "source_files": "MessageCustomF/Classes/**/*",
+  "dependencies": {
+    "RongCloudIM": [
+      "~> 5.2.3"
+    ]
+  }
 }
