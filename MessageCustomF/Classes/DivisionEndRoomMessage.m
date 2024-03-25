@@ -55,7 +55,8 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-//        self.fuyaExtra = [aDecoder decodeObjectForKey:@"extra"]; }
+        //        self.fuyaExtra = [aDecoder decodeObjectForKey:@"extra"];
+    }
     return self;
 }
 
