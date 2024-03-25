@@ -7,10 +7,10 @@
 
 #import "DivisionFaceKRefuseMessage.h"
 
-@synthesize extra = _extra;
+
 
 @implementation DivisionFaceKRefuseMessage
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKRefuseMessage *facekData = [DivisionFaceKRefuseMessage new];
     if (facekData) {
