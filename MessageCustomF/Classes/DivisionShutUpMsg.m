@@ -32,14 +32,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:KEY_TXTMSG_CONTENT];
-        self.newExtra = [aDecoder decodeObjectForKey:KEY_TXTMSG_EXTRA]; }
+        self.fuyaExtra = [aDecoder decodeObjectForKey:KEY_TXTMSG_EXTRA]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:KEY_TXTMSG_CONTENT];
-    [aCoder encodeObject:self.newExtra forKey:KEY_TXTMSG_EXTRA];
+    [aCoder encodeObject:self.fuyaExtra forKey:KEY_TXTMSG_EXTRA];
     
 }
 
@@ -49,8 +49,8 @@
     
     NSMutableDictionary *dataDict=[NSMutableDictionary dictionary];
     [dataDict setObject:self.content forKey:@"content"];
-    if (self.newExtra) {
-        [dataDict setObject:self.newExtra forKey:@"extra"];
+    if (self.fuyaExtra) {
+        [dataDict setObject:self.fuyaExtra forKey:@"extra"];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dataDict
@@ -73,7 +73,7 @@
     if ([dictionary objectForKey:@"content"]) {
         self.content = dictionary[@"content"];
         NSLog(@"dictionary1111 == %@",dictionary[@"content"]);
-        self.newExtra = dictionary[@"extra"];
+        self.fuyaExtra = dictionary[@"extra"];
     }else{
         NSError *error;
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:nil];

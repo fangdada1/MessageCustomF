@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong)NSString *content;
 
-@property (nonatomic, copy)NSString* newExtra;
+@property (nonatomic, copy)NSString* fuyaExtra;
 
 +(instancetype)messageWithContent:(NSString *)jsonContent;
 

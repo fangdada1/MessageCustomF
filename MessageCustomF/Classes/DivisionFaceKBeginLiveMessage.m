@@ -30,14 +30,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-        self.newExtra = [aDecoder decodeObjectForKey:@"extra"]; }
+        self.fuyaExtra = [aDecoder decodeObjectForKey:@"extra"]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeObject:self.newExtra forKey:@"extra"];
+    [aCoder encodeObject:self.fuyaExtra forKey:@"extra"];
     
 }
 
@@ -47,8 +47,8 @@
     
     NSMutableDictionary *dic=[NSMutableDictionary dictionary];
     [dic setObject:self.content forKey:@"content"];
-    if (self.newExtra) {
-        [dic setObject:self.newExtra forKey:@"extra"];
+    if (self.fuyaExtra) {
+        [dic setObject:self.fuyaExtra forKey:@"extra"];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic
@@ -75,7 +75,7 @@
         }else{
             content = [[NSString alloc]initWithData:contentData encoding:NSUTF8StringEncoding];
         }
-        self.newExtra = dictionary[@"extra"];
+        self.fuyaExtra = dictionary[@"extra"];
         self.content = content;
 //    }
     

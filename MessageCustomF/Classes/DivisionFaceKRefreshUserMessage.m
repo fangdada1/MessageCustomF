@@ -30,14 +30,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-        self.newExtra = [aDecoder decodeObjectForKey:@"extra"]; }
+        self.fuyaExtra = [aDecoder decodeObjectForKey:@"extra"]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeObject:self.newExtra forKey:@"extra"];
+    [aCoder encodeObject:self.fuyaExtra forKey:@"extra"];
 }
 
 #pragma mark – RCMessageCoding delegate methods
@@ -46,8 +46,8 @@
     
     NSMutableDictionary *dic=[NSMutableDictionary dictionary];
     [dic setObject:self.content forKey:@"content"];
-    if (self.newExtra) {
-        [dic setObject:self.newExtra forKey:@"extra"];
+    if (self.fuyaExtra) {
+        [dic setObject:self.fuyaExtra forKey:@"extra"];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic
@@ -68,7 +68,7 @@
                                                                  error:&__error];
     if ([dic objectForKey:@"content"]) {
         self.content = dic[@"content"];
-        self.newExtra = dic[@"extra"];
+        self.fuyaExtra = dic[@"extra"];
     }else{
         self.content = [[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:kNilOptions error:nil] encoding:NSUTF8StringEncoding];
     }
