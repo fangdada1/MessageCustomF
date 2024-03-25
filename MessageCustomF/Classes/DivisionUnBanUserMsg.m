@@ -8,7 +8,6 @@
 #import "DivisionUnBanUserMsg.h"
 
 @implementation DivisionUnBanUserMsg
-@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionUnBanUserMsg *data = [DivisionUnBanUserMsg new];
     if (data) {
@@ -30,14 +29,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-        self.extra = [aDecoder decodeObjectForKey:@"extra"]; }
+        self.newExtra = [aDecoder decodeObjectForKey:@"extra"]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeObject:self.extra forKey:@"extra"];
+    [aCoder encodeObject:self.newExtra forKey:@"extra"];
     
 }
 
@@ -47,8 +46,8 @@
     
     NSMutableDictionary *dataDict=[NSMutableDictionary dictionary];
     [dataDict setObject:self.content forKey:@"content"];
-    if (self.extra) {
-        [dataDict setObject:self.extra forKey:@"extra"];
+    if (self.newExtra) {
+        [dataDict setObject:self.newExtra forKey:@"extra"];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dataDict
@@ -67,7 +66,7 @@
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
                                                                options:kNilOptions
                                                                  error:&__error];
-    self.extra = dictionary[@"extra"];
+    self.newExtra = dictionary[@"extra"];
     self.content = [[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:nil] encoding:NSUTF8StringEncoding];
     
 }

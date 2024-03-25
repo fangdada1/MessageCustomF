@@ -9,8 +9,6 @@
 
 @implementation DivisionFaceKBeginLiveMessage
 
-@synthesize extra = _extra;
-
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKBeginLiveMessage *facekData = [DivisionFaceKBeginLiveMessage new];
     if (facekData) {
@@ -32,14 +30,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-        self.extra = [aDecoder decodeObjectForKey:@"extra"]; }
+        self.newExtra = [aDecoder decodeObjectForKey:@"extra"]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeObject:self.extra forKey:@"extra"];
+    [aCoder encodeObject:self.newExtra forKey:@"extra"];
     
 }
 
@@ -49,8 +47,8 @@
     
     NSMutableDictionary *dic=[NSMutableDictionary dictionary];
     [dic setObject:self.content forKey:@"content"];
-    if (self.extra) {
-        [dic setObject:self.extra forKey:@"extra"];
+    if (self.newExtra) {
+        [dic setObject:self.newExtra forKey:@"extra"];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic
@@ -77,7 +75,7 @@
         }else{
             content = [[NSString alloc]initWithData:contentData encoding:NSUTF8StringEncoding];
         }
-        self.extra = dictionary[@"extra"];
+        self.newExtra = dictionary[@"extra"];
         self.content = content;
 //    }
     

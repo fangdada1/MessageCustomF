@@ -8,14 +8,13 @@
 #import "DivisionNewEndRoomMessage.h"
 
 @implementation DivisionNewEndRoomMessage
-@synthesize extra = _extra;
 -(NSData *)encode {
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:self.content forKey:@"content"];
-    if (self.extra) {
-        [dic setObject:self.extra forKey:@"extra"];
-    }
+//    if (self.extra) {
+//        [dic setObject:self.extra forKey:@"extra"];
+//    }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic
                                                    options:kNilOptions
@@ -33,7 +32,7 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data
                                                                options:kNilOptions
                                                                  error:&__error];
-    self.extra = dic[@"extra"];
+//    self.extra = dic[@"extra"];
     self.content = [[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:kNilOptions error:nil] encoding:NSUTF8StringEncoding];
 }
 
@@ -52,14 +51,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-        self.extra = [aDecoder decodeObjectForKey:@"extra"]; }
+//        self.extra = [aDecoder decodeObjectForKey:@"extra"]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeObject:self.extra forKey:@"extra"];
+//    [aCoder encodeObject:self.extra forKey:@"extra"];
     
 }
 

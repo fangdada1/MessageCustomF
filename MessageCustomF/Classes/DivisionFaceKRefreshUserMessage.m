@@ -9,8 +9,6 @@
 
 @implementation DivisionFaceKRefreshUserMessage
 
-@synthesize extra = _extra;
-
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKRefreshUserMessage *facekData = [DivisionFaceKRefreshUserMessage new];
     if (facekData) {
@@ -32,14 +30,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-        self.extra = [aDecoder decodeObjectForKey:@"extra"]; }
+        self.newExtra = [aDecoder decodeObjectForKey:@"extra"]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeObject:self.extra forKey:@"extra"];
+    [aCoder encodeObject:self.newExtra forKey:@"extra"];
 }
 
 #pragma mark – RCMessageCoding delegate methods
@@ -48,8 +46,8 @@
     
     NSMutableDictionary *dic=[NSMutableDictionary dictionary];
     [dic setObject:self.content forKey:@"content"];
-    if (self.extra) {
-        [dic setObject:self.extra forKey:@"extra"];
+    if (self.newExtra) {
+        [dic setObject:self.newExtra forKey:@"extra"];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic
@@ -70,7 +68,7 @@
                                                                  error:&__error];
     if ([dic objectForKey:@"content"]) {
         self.content = dic[@"content"];
-        self.extra = dic[@"extra"];
+        self.newExtra = dic[@"extra"];
     }else{
         self.content = [[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:kNilOptions error:nil] encoding:NSUTF8StringEncoding];
     }

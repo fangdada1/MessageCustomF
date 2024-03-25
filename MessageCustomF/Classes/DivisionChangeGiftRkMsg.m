@@ -9,8 +9,6 @@
 
 @implementation DivisionChangeGiftRkMsg
 
-@synthesize extra = _extra;
-
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionChangeGiftRkMsg *data = [DivisionChangeGiftRkMsg new];
     if (data) {
@@ -32,14 +30,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:@"content"];
-        self.extra = [aDecoder decodeObjectForKey:@"extra"]; }
+        self.newExtra = [aDecoder decodeObjectForKey:@"extra"]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:@"content"];
-    [aCoder encodeObject:self.extra forKey:@"extra"];
+    [aCoder encodeObject:self.newExtra forKey:@"extra"];
     
 }
 
@@ -49,10 +47,10 @@
     
     NSMutableDictionary *dataDict=[NSMutableDictionary dictionary];
     [dataDict setObject:self.content forKey:@"content"];
-    if (self.extra) {
-        [dataDict setObject:self.extra forKey:@"extra"];
+    if (self.newExtra) {
+        [dataDict setObject:self.newExtra forKey:@"extra"];
     }
-    
+//    
     NSData *data = [NSJSONSerialization dataWithJSONObject:dataDict
                                                    options:kNilOptions
                                                      error:nil];
@@ -71,7 +69,7 @@
                                                                  error:&__error];
     if ([dictionary objectForKey:@"content"]) {
         self.content = dictionary[@"content"];
-        self.extra = dictionary[@"extra"];
+        self.newExtra = dictionary[@"extra"];
     }else{
         self.content = [[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:nil] encoding:NSUTF8StringEncoding];
     }

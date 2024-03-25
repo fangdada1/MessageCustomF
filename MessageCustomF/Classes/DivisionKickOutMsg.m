@@ -9,7 +9,6 @@
 
 @implementation DivisionKickOutMsg
 
-@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionKickOutMsg *model = [DivisionKickOutMsg new];
     if (model) {
@@ -34,14 +33,14 @@
     self = [super init];
     if (self) {
         self.content = [aDecoder decodeObjectForKey:KEY_TXTMSG_CONTENT];
-        self.extra = [aDecoder decodeObjectForKey:KEY_TXTMSG_EXTRA]; }
+        self.newExtra = [aDecoder decodeObjectForKey:KEY_TXTMSG_EXTRA]; }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.content forKey:KEY_TXTMSG_CONTENT];
-    [aCoder encodeObject:self.extra forKey:KEY_TXTMSG_EXTRA];
+    [aCoder encodeObject:self.newExtra forKey:KEY_TXTMSG_EXTRA];
     
 }
 
@@ -51,8 +50,8 @@
     
     NSMutableDictionary *dataDict=[NSMutableDictionary dictionary];
     [dataDict setObject:self.content forKey:@"content"];
-    if (self.extra) {
-        [dataDict setObject:self.extra forKey:@"extra"];
+    if (self.newExtra) {
+        [dataDict setObject:self.newExtra forKey:@"extra"];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dataDict
@@ -75,7 +74,7 @@
     if ([dictionary objectForKey:@"content"]) {
         self.content = dictionary[@"content"];
         NSLog(@"dictionary1111 == %@",dictionary[@"content"]);
-        self.extra = dictionary[@"extra"];
+        self.newExtra = dictionary[@"extra"];
     }else{
         NSError *error;
         NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:nil];
