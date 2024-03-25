@@ -9,6 +9,8 @@
 
 @implementation DivisionFaceKBlanceChangeMessage
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKBlanceChangeMessage *facekData = [DivisionFaceKBlanceChangeMessage new];
     if (facekData) {

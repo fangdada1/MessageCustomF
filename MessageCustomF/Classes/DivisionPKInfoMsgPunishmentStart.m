@@ -8,6 +8,7 @@
 #import "DivisionPKInfoMsgPunishmentStart.h"
 
 @implementation DivisionPKInfoMsgPunishmentStart
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionPKInfoMsgPunishmentStart *data = [DivisionPKInfoMsgPunishmentStart new];
     if (data) {

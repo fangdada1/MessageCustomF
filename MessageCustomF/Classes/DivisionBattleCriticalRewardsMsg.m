@@ -8,6 +8,8 @@
 #import "DivisionBattleCriticalRewardsMsg.h"
 
 @implementation DivisionBattleCriticalRewardsMsg
+
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionBattleCriticalRewardsMsg *data = [DivisionBattleCriticalRewardsMsg new];
     if (data) {

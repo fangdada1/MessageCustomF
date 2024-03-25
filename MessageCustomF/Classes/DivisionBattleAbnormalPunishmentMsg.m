@@ -8,6 +8,9 @@
 #import "DivisionBattleAbnormalPunishmentMsg.h"
 
 @implementation DivisionBattleAbnormalPunishmentMsg
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionBattleAbnormalPunishmentMsg *data = [DivisionBattleAbnormalPunishmentMsg new];
     if (data) {

@@ -9,6 +9,8 @@
 
 @implementation DivisionAuthorUpLMsg
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionAuthorUpLMsg *data = [DivisionAuthorUpLMsg new];
     if (data) {

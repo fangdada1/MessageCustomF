@@ -9,6 +9,7 @@
 
 @implementation DivisionOfficialSystemMsg
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionOfficialSystemMsg *data = [DivisionOfficialSystemMsg new];
     if (data) {

@@ -8,6 +8,7 @@
 #import "DivisionLiveCallCancelMsg.h"
 
 @implementation DivisionLiveCallCancelMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionLiveCallCancelMsg *data = [DivisionLiveCallCancelMsg new];
     if (data) {

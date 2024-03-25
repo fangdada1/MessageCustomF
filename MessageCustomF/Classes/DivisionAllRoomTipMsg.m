@@ -8,6 +8,9 @@
 #import "DivisionAllRoomTipMsg.h"
 
 @implementation DivisionAllRoomTipMsg
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionAllRoomTipMsg *data = [DivisionAllRoomTipMsg new];
     if (data) {

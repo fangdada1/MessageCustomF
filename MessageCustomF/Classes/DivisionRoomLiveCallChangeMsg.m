@@ -8,6 +8,7 @@
 #import "DivisionRoomLiveCallChangeMsg.h"
 
 @implementation DivisionRoomLiveCallChangeMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionRoomLiveCallChangeMsg *data = [DivisionRoomLiveCallChangeMsg new];
     if (data) {

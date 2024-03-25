@@ -8,6 +8,9 @@
 #import "DivisionApplyLiveCallMsg.h"
 
 @implementation DivisionApplyLiveCallMsg
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionApplyLiveCallMsg *data = [DivisionApplyLiveCallMsg new];
     if (data) {

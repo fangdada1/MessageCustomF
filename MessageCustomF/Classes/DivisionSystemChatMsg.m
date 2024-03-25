@@ -8,7 +8,7 @@
 #import "DivisionSystemChatMsg.h"
 
 @implementation DivisionSystemChatMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionSystemChatMsg *data = [DivisionSystemChatMsg new];
     if (data) {

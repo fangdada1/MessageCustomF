@@ -9,6 +9,8 @@
 
 @implementation DivisionCustomGifts
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionCustomGifts *data = [DivisionCustomGifts new];
     if (data) {

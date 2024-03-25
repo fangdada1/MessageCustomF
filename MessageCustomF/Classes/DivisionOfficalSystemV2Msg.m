@@ -8,7 +8,7 @@
 #import "DivisionOfficalSystemV2Msg.h"
 
 @implementation DivisionOfficalSystemV2Msg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionOfficalSystemV2Msg *data = [DivisionOfficalSystemV2Msg new];
     if (data) {

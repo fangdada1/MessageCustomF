@@ -8,6 +8,9 @@
 #import "DivisionDiamondsCriticalMsg.h"
 
 @implementation DivisionDiamondsCriticalMsg
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionDiamondsCriticalMsg *data = [DivisionDiamondsCriticalMsg new];
     if (data) {

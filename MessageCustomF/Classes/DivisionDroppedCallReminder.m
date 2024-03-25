@@ -9,6 +9,8 @@
 
 @implementation DivisionDroppedCallReminder
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionDroppedCallReminder *data = [DivisionDroppedCallReminder new];
     if (data) {

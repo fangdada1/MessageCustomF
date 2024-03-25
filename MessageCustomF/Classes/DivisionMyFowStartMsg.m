@@ -8,6 +8,7 @@
 #import "DivisionMyFowStartMsg.h"
 
 @implementation DivisionMyFowStartMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionMyFowStartMsg *data = [DivisionMyFowStartMsg new];
     if (data) {

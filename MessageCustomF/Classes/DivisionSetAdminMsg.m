@@ -8,7 +8,7 @@
 #import "DivisionSetAdminMsg.h"
 
 @implementation DivisionSetAdminMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionSetAdminMsg *model = [DivisionSetAdminMsg new];
     if (model) {

@@ -8,7 +8,7 @@
 #import "DivisionUpLMsg.h"
 
 @implementation DivisionUpLMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionUpLMsg *data = [DivisionUpLMsg new];
     if (data) {

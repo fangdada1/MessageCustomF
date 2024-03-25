@@ -8,6 +8,7 @@
 #import "DivisonQuestWarnMsg.h"
 
 @implementation DivisonQuestWarnMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisonQuestWarnMsg *data = [DivisonQuestWarnMsg new];
     if (data) {

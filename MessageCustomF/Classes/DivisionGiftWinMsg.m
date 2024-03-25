@@ -9,6 +9,7 @@
 
 @implementation DivisionGiftWinMsg
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionGiftWinMsg *data = [DivisionGiftWinMsg new];
     if (data) {

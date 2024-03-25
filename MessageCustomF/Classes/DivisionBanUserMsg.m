@@ -9,6 +9,8 @@
 
 @implementation DivisionBanUserMsg
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionBanUserMsg *data = [DivisionBanUserMsg new];
     if (data) {

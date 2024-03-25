@@ -9,6 +9,7 @@
 
 @implementation DivisionMaxMultipleMsg
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionMaxMultipleMsg *data = [DivisionMaxMultipleMsg new];
     if (data) {

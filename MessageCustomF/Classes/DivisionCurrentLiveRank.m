@@ -8,6 +8,9 @@
 #import "DivisionCurrentLiveRank.h"
 
 @implementation DivisionCurrentLiveRank
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionCurrentLiveRank *data = [DivisionCurrentLiveRank new];
     if (data) {

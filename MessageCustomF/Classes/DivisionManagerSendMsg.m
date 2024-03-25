@@ -8,6 +8,8 @@
 #import "DivisionManagerSendMsg.h"
 
 @implementation DivisionManagerSendMsg
+
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionManagerSendMsg *data = [DivisionManagerSendMsg new];
     if (data) {

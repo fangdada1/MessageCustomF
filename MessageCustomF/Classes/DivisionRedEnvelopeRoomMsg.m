@@ -8,6 +8,7 @@
 #import "DivisionRedEnvelopeRoomMsg.h"
 
 @implementation DivisionRedEnvelopeRoomMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionRedEnvelopeRoomMsg *model = [DivisionRedEnvelopeRoomMsg new];
     if (model) {

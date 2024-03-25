@@ -8,6 +8,7 @@
 #import "DivisionMessageRoomOne.h"
 
 @implementation DivisionMessageRoomOne
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionMessageRoomOne *data = [DivisionMessageRoomOne new];
     if (data) {

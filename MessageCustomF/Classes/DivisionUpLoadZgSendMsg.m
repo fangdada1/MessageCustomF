@@ -8,6 +8,7 @@
 #import "DivisionUpLoadZgSendMsg.h"
 
 @implementation DivisionUpLoadZgSendMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionUpLoadZgSendMsg *data = [DivisionUpLoadZgSendMsg new];
     if (data) {

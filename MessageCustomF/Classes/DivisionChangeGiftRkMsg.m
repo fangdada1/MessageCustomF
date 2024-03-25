@@ -8,6 +8,9 @@
 #import "DivisionChangeGiftRkMsg.h"
 
 @implementation DivisionChangeGiftRkMsg
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionChangeGiftRkMsg *data = [DivisionChangeGiftRkMsg new];
     if (data) {

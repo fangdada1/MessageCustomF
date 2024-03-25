@@ -9,6 +9,8 @@
 
 @implementation DivisionAnchorWarningMsg
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionAnchorWarningMsg *data = [DivisionAnchorWarningMsg new];
     if (data) {

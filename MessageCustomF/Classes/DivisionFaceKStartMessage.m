@@ -9,6 +9,7 @@
 
 @implementation DivisionFaceKStartMessage
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKStartMessage *facekData = [DivisionFaceKStartMessage new];
     if (facekData) {

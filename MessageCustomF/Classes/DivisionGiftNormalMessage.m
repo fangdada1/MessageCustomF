@@ -8,6 +8,7 @@
 #import "DivisionGiftNormalMessage.h"
 
 @implementation DivisionGiftNormalMessage
+@synthesize extra = _extra;
 
 -(NSData *)encode {
     

@@ -8,6 +8,9 @@
 #import "DivisionChatRoomEndMix.h"
 
 @implementation DivisionChatRoomEndMix
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionChatRoomEndMix *data = [DivisionChatRoomEndMix new];
     if (data) {

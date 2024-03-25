@@ -9,6 +9,7 @@
 
 @implementation DivisionFaceKEndMessage
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKEndMessage *facekData = [DivisionFaceKEndMessage new];
     if (facekData) {

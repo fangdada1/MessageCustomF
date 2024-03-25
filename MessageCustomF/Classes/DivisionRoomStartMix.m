@@ -8,6 +8,7 @@
 #import "DivisionRoomStartMix.h"
 
 @implementation DivisionRoomStartMix
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionRoomStartMix *data = [DivisionRoomStartMix new];
     if (data) {

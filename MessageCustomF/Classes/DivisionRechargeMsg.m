@@ -8,7 +8,7 @@
 #import "DivisionRechargeMsg.h"
 
 @implementation DivisionRechargeMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionRechargeMsg *data = [DivisionRechargeMsg new];
     if (data) {

@@ -8,6 +8,9 @@
 #import "DivisionAssistPopMsg.h"
 
 @implementation DivisionAssistPopMsg
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionAssistPopMsg *data = [DivisionAssistPopMsg new];
     if (data) {

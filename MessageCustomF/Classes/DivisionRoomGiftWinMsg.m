@@ -8,7 +8,7 @@
 #import "DivisionRoomGiftWinMsg.h"
 
 @implementation DivisionRoomGiftWinMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionRoomGiftWinMsg *data = [DivisionRoomGiftWinMsg new];
     if (data) {

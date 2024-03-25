@@ -9,6 +9,7 @@
 
 @implementation DivisionKickOutMsg
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionKickOutMsg *model = [DivisionKickOutMsg new];
     if (model) {

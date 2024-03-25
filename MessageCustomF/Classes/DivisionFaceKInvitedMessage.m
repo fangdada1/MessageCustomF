@@ -9,6 +9,8 @@
 
 @implementation DivisionFaceKInvitedMessage
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKInvitedMessage *facekData = [DivisionFaceKInvitedMessage new];
     if (facekData) {

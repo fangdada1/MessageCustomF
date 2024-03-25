@@ -8,7 +8,7 @@
 #import "DivisionNewEndRoomMessage.h"
 
 @implementation DivisionNewEndRoomMessage
-
+@synthesize extra = _extra;
 -(NSData *)encode {
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];

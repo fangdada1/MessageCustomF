@@ -8,6 +8,9 @@
 #import "DivisionBattleAudioStatesMsg.h"
 
 @implementation DivisionBattleAudioStatesMsg
+
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionBattleAudioStatesMsg *data = [DivisionBattleAudioStatesMsg new];
     if (data) {

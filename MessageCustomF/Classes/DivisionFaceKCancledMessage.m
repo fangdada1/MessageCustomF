@@ -9,6 +9,8 @@
 
 @implementation DivisionFaceKCancledMessage
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKCancledMessage *facekData = [DivisionFaceKCancledMessage new];
     if (facekData) {

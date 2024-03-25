@@ -9,6 +9,7 @@
 
 @implementation DivisionMessageMoment
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionMessageMoment *data = [DivisionMessageMoment new];
     if (data) {

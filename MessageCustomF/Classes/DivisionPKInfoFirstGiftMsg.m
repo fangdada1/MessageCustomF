@@ -8,6 +8,7 @@
 #import "DivisionPKInfoFirstGiftMsg.h"
 
 @implementation DivisionPKInfoFirstGiftMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionPKInfoFirstGiftMsg *data = [DivisionPKInfoFirstGiftMsg new];
     if (data) {

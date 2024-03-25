@@ -9,6 +9,8 @@
 
 @implementation DivisionEndLiveMessage
 
+@synthesize extra = _extra;
+
 -(NSData *)encode {
     
     NSMutableDictionary *dataDict=[NSMutableDictionary dictionary];

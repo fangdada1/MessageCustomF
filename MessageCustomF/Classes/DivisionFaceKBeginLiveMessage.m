@@ -9,6 +9,8 @@
 
 @implementation DivisionFaceKBeginLiveMessage
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKBeginLiveMessage *facekData = [DivisionFaceKBeginLiveMessage new];
     if (facekData) {

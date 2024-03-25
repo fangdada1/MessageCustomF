@@ -8,6 +8,7 @@
 #import "DivisionMvpToBattleMsg.h"
 
 @implementation DivisionMvpToBattleMsg
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionMvpToBattleMsg *data = [DivisionMvpToBattleMsg new];
     if (data) {

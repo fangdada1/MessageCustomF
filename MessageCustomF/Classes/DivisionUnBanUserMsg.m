@@ -8,7 +8,7 @@
 #import "DivisionUnBanUserMsg.h"
 
 @implementation DivisionUnBanUserMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionUnBanUserMsg *data = [DivisionUnBanUserMsg new];
     if (data) {

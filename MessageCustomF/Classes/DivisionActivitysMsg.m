@@ -9,6 +9,8 @@
 
 @implementation DivisionActivitysMsg
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionActivitysMsg *data = [DivisionActivitysMsg new];
     if (data) {

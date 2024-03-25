@@ -9,6 +9,8 @@
 
 @implementation DivisionFaceKRefreshUserMessage
 
+@synthesize extra = _extra;
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKRefreshUserMessage *facekData = [DivisionFaceKRefreshUserMessage new];
     if (facekData) {

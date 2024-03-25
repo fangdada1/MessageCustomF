@@ -9,6 +9,7 @@
 
 @implementation DivisionLiveUserMsg
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionLiveUserMsg *data = [DivisionLiveUserMsg new];
     if (data) {

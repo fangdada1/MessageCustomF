@@ -9,6 +9,7 @@
 
 @implementation DivisionIncomeMsg
 
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionIncomeMsg *data = [DivisionIncomeMsg new];
     if (data) {

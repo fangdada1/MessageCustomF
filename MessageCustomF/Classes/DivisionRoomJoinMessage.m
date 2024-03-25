@@ -8,7 +8,7 @@
 #import "DivisionRoomJoinMessage.h"
 
 @implementation DivisionRoomJoinMessage
-
+@synthesize extra = _extra;
 -(NSData *)encode {
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];

@@ -8,7 +8,7 @@
 #import "DivisionPkServiceMsg.h"
 
 @implementation DivisionPkServiceMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionPkServiceMsg *data = [DivisionPkServiceMsg new];
     if (data) {

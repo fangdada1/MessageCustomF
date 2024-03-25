@@ -8,7 +8,7 @@
 #import "DivisionShutUpMsg.h"
 
 @implementation DivisionShutUpMsg
-
+@synthesize extra = _extra;
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionShutUpMsg *model = [DivisionShutUpMsg new];
     if (model) {
