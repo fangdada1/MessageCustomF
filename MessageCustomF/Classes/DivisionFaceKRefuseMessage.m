@@ -7,9 +7,8 @@
 
 #import "DivisionFaceKRefuseMessage.h"
 
-
-
 @implementation DivisionFaceKRefuseMessage
+
 + (instancetype)messageWithContent:(NSString *)jsonContent {
     DivisionFaceKRefuseMessage *facekData = [DivisionFaceKRefuseMessage new];
     if (facekData) {
